@@ -1,0 +1,16 @@
+{
+  "name": "easymath",
+  "version": "0.1.0",
+  "description": "Easy Math",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha -r should"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "mocha": "~1.7.3",
+    "should": "~1.2.1"
+  }
+}
