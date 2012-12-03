@@ -4,13 +4,15 @@
   "description": "Easy Math",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha -r should"
+    "test": "node_modules/.bin/mocha -r should",
+    "browserify": "node_modules/.bin/browserify -i system -i file index.js -o browser/index.js"
   },
   "repository": "",
   "author": "",
   "license": "BSD",
   "devDependencies": {
     "mocha": "~1.7.3",
-    "should": "~1.2.1"
+    "should": "~1.2.1",
+    "browserify": "latest"
   }
 }
