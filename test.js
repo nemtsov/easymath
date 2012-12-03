@@ -2,7 +2,7 @@ var em = require('./easymath');
 
 describe('EeasyMath', function () {
   function e(str) {
-    return em.parse(str).exec();
+    return em.parse(str).evaluate();
   }
 
   describe('core', function () {
