@@ -14,7 +14,7 @@ exports.ConstantLit = ConstantLit;
 function Program(node) {
   this.root = node;
 }
-Program.prototype.exec = function () {
+Program.prototype.evaluate = function () {
   var v = this.root.exec();
   return v;
 };
