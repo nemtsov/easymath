@@ -783,7 +783,7 @@ exports.ConstantLit = ConstantLit;
 function Program(node) {
   this.root = node;
 }
-Program.prototype.exec = function () {
+Program.prototype.evaluate = function () {
   var v = this.root.exec();
   return v;
 };
@@ -903,8 +903,19 @@ require.define("fs",function(require,module,exports,__dirname,__filename,process
 
 require.define("/index.js",function(require,module,exports,__dirname,__filename,process,global){var parser = require('./easymath');
 
-var prog = parser.parse('e^3');
-prog.exec();
+module.exports = new EasyMath();
+
+function EasyMath() {
+  this._parser = parser;
+}
+
+EasyMath.prototype.parse = function (str) {
+  return this._parser.parse(str);
+};
+
+EasyMath.prototype.evaluate = function (str) {
+  return this._parser.parse(str).evaluate();
+};
 
 });
 require("/index.js");
